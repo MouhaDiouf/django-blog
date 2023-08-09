@@ -9,6 +9,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
+    # official or canonical URL for the model
     def get_absolute_url(self):
         return reverse("post_detail", kwargs={"pk": self.pk})
